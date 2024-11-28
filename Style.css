@@ -1,0 +1,501 @@
+:root{
+   --pink : #e84393;
+
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html{
+    font-size:62.5% ;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 2rem 9%;
+}
+.header{
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgb(0, 0, .1);
+
+
+}
+.logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+.header  .navBar a{ 
+    padding: 0 1.5rem;
+    font-size: 2rem;
+    color: #666;
+
+}
+.header  .navBar a:hover{
+    color: var(--pink);
+  
+}
+.header .icons a{
+    color: #333;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+.header .icons a:hover{
+    color: var(--pink);
+}
+
+
+#toggler{
+    display: none;
+}
+.n{
+    font-size: 3rem;
+    color: #333;
+    border-radius: 5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0 ,.3);
+    display: none;
+
+}
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./image/3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.content{
+    max-width: 50rem;
+}
+.content h3{
+    font-size: 4rem;
+    color: #333;
+}
+.content span{
+    font-size: 2.5rem;
+    color: var(--pink);
+}
+.content p{
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    /* padding: 9rem 3.5rem; */
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+.btn:hover{
+    background: #e84393;
+    color: #333;
+}
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;  
+
+}
+.heading span{
+    color: #e84393;
+}
+.row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0 ;
+
+}
+.imgs{
+    flex: 1 1 40rem;
+    width: 50%;
+    position: relative;
+}
+.imgs h3{
+    position: absolute;
+    top: 50% ; transform: translateY(-50%);
+    font-size: 4rem;
+    background: #fff;
+    width: 100%;
+    padding: 1px 2 px;
+    text-align: center;
+    mix-blend-mode: screen;
+
+}
+.imgs img{
+    width: 100%;
+    height: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: 5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+.about .content{
+    flex: 1 1 40rem;
+}
+
+.about .content h3{
+    font-size: 2rem;
+    color: #333;
+}
+.about .content p{
+    font-size: 2rem;
+    color: #999;
+    padding: 4rem  0;
+    
+}
+.icon-container{
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.icon-container img{
+    max-width: 30%;
+}
+.icon-container .icons{
+    background: #fff;
+    border: 1rem solid rgba(0, 0, 0 ,.1);
+    padding: 2rem;
+    display: flex;
+    flex: 1 1 20rem;
+    align-items: center;
+
+}
+
+/* start product Section */
+
+
+
+.product .boxContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.product .boxContainer .box{
+    flex:  1 1 30rem;
+    box-shadow: 0 .5rem  1.5rem rgba(0, 0, 0 ,.1);
+    border-radius: .5rem;
+    border: 1rem solid rgba(0, 0, 0 ,.1);
+    position: relative;
+}
+.product .boxContainer .box .discount{
+    /* position: absolute; */
+    top: 1rem ; left: 1rem;
+    padding: 7rem 1rem;
+    font-size: 2rem;
+    color: var(--pink);
+    background: rgba(255, 51, 153 ,.05);
+    z-index: 1;
+    border-radius: .5rem;
+}
+.product .boxContainer .box .image{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+.product .boxContainer .box .image img{
+    height: 25rem;
+    width: 100%;
+}
+.product .boxContainer .box:hover .image img{
+    transform: scale(1.1);
+
+}
+.product .boxContainer .box .image .icons{
+    position: absolute;
+    bottom: -7rem; right: 0; left: 0;
+    display: flex;
+
+
+}
+.product .boxContainer .box:hover .image .icons{
+    bottom: 0;
+}
+.product .boxContainer .box .image .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background: var(--pink);
+    color: #fff;
+}
+.product .content{
+    padding: 2rem;
+    text-align: center;
+}
+.product .content h3{
+    font-size: 2.5rem;
+    color: #333;
+}
+.product .content .price{
+    font-size: 2.5rem;
+    color: var(--pink);
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+.product .content span{
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: lighter;
+   text-decoration: line-through;
+}
+
+/* start section review */
+/* .review img{
+    max-width: 50%;
+} */
+.review .BoxConta{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.review .BoxConta .box{
+    flex:  1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0 ,.1);
+    border-radius: .5rem;
+    padding: 3rem 2rem;
+    position: relative;
+}
+.review .BoxConta .box .n{
+    position: absolute;
+    bottom: 3rem; right: 3rem;
+    font-size: 6rem;
+    color: #eee;
+}
+.review .BoxConta .box .start{
+    color: var(--pink);
+    font-size: 2rem;
+
+}
+.review .BoxConta .box p{
+    color: #999;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding-top: 2rem; 
+}
+.review .BoxConta .box .user{
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+.review .BoxConta .box img{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+.review .BoxConta .box .user h3{
+    font-size: 2rem;
+    color: #333;
+}
+.review .BoxConta .box .user span{
+    font-size: 1.5rem;
+    color: #999;
+}
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+    align-items: center;
+}
+.contact .row form{
+    flex: 1 1 40rem;
+    padding:  2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0 ,.1);
+    border: .1rem solid rgba(0, 0, 0 ,.1);
+    background: #fff;
+    border-radius: 5rem;
+}
+.contact .row .image{
+    flex: 1 1 40rem;
+    
+}
+.contact .row .image img{
+    width: 100%;
+}
+.contact .row form .box{
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: 1rem solid rgba(0, 0, 0 ,.1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width: 100%;
+}
+.contact .row form .box:focus{
+    border-color: var(--pink);
+}
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+
+
+.footer .BoxConta{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.footer .BoxConta .box{
+    flex: 1 1 25rem;
+}
+.footer .BoxConta .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+.footer .BoxConta .box a {
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+
+}
+.footer .BoxConta .box a:hover {
+    color: var(--pink);
+    text-decoration: underline;
+}
+.footer .BoxConta .box img{
+    margin-top: 1rem;
+    width: 100%;
+
+}
+
+.footer .cridt{
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #333;
+    border-top: .1rem solid rgba(0, 0, 0 ,.1);
+}
+.footer .cridt span{
+    color: var(--pink);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width :991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding:2rem ;
+    }
+    section{
+        padding:2rem ;
+    }
+    .home{
+        background-position: left;
+    }
+}
+
+
+
+@media (max-width :768px){
+    .n{
+        display: block;
+    }
+    .header .navBar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top: 1rem solid rgba(0, 0, 0, .1); 
+        clip-path: polygon(0 0 ,100% 0 , 0 0);
+        
+    }
+    .header #toggler:checked ~ .navBar{
+        clip-path: polygon(0 0 ,100% 0 ,100% 100%, 0 100%);
+
+    }
+    .header .navBar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #eee;
+        border: 1rem solid rgba(0, 0, 0, .1);
+        display: block;
+
+
+
+    }
+    .home .content h3{
+        font-size: 3rem;
+    }
+    .home .content span{
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width :450px){
+    html{
+        font-size: 50%;
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
